@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { font-family: Arial; 
+                margin: 100px;
+                padding: 100px; }
+        label { display: block;
+                margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Name Splitter</h1>
+    <input type="text" id="fullName" placeholder="fullName">
+    <button onclick="splitName()">submit</button>
+
+    <label>First Name:<span id="firstName">NA</span></label>
+    <label>Middle Name:<span id="middleName">NA</span></label>
+    <label>Last Name:<span id="lastName">NA</span></label>
+
+
+    <script>
+        function splitName(){
+            const [firstName ="NA", ...rest]=document.getElementById("fullName").value.trim().split(" ");
+            const lastName=rest.length ? rest.pop():"NA";
+            const MiddleName=rest.length ? rest.join(" "):"NA";
+
+            document.getElementById("firstName").textContent=firstName;
+            document.getElementById("middleName").textContent=MiddleName;
+            document.getElementById("lastName").textContent=lastName;
+            
+        }
+    </script>
+</body>
+</html>
+

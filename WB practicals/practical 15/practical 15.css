@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap'); */
+.main {
+    width: 100;
+    height: 100vh;
+    background: url('ravi.jpg');
+    background-size: contain;
+}
+
+.countdown {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0.7, 0, 0.4);
+}
+
+.title {
+    margin-top: 10PX;
+    color: rgb(237, 7, 137);
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.col {
+    margin-top: 100px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    color: rgb(248, 245, 245);
+}
+
+.col div {
+    width: 200px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+input {
+    width: 50%;
+    background-color: rgba(66, 128, 125, 0.9);
+    border-radius: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+}

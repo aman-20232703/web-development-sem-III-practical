@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admission form</title>
+    <style>
+        label {
+            width: 200px;
+
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>RAMANUJAN COLLEGE</h1>
+        <h2>University Of Delhi</h2>
+        <h3>Admission Form(B.voc Software Development)</h3>
+        <h1></h1>
+    </header>
+    <hr>
+
+    <!-- <canvas input type="text" width="110" height="125" style="border:1px solid">
+    </canvas>
+    <br>
+    <label>choose a photo</label> -->
+
+    <form name="myform" action="admission form.html" onsubmit="return validateForm()" method="post">
+
+        <!-- <h4><u>Personalize:-</u></h4> -->
+
+        <fieldset>
+            <legend>Personalia</legend>
+
+            <label>registration number:
+                <input type="text" id="rg.no">
+            </label>
+            <br><br><br>
+            <label>password:
+                <input type="password" id="pass">
+            </label>
+            <label>confirm password:
+                <input type="password" id="passcnf">
+            </label>
+            <br>
+            <!-- <p id="demo"></p> -->
+            <br><br><br>
+            <label>First Name:
+                <input type="text" placeholder="Block Letter" id="fname">
+            </label>
+            <!-- <br><br> -->
+            <label>Last Name:
+                <input type="text" placeholder="" id="lname">
+            </label>
+            <br><br>
+
+            <label>Father Name:</label>
+            <input type="text" id="father">
+            <br><br>
+            <label>Mother Name:</label>
+            <input type="text" id="mother">
+            <br><br>
+
+            <label>Email:
+                <input type="text" placeholder="" id="email">
+            </label>
+            <br><br>
+            <label>Mobile Number:
+                <input type="text" placeholder="" id="mobile number">
+            </label>
+            <br><br>
+
+            <label>Course</label>
+            <input type="text" id="subject">
+
+            <label>Gender:
+                <input type="radio" value="male" name="gender" id="male">male
+            </label>
+            <label>
+                <input type="radio" value="Female" name="gender" id="female">Female
+            </label>
+            <br><br>
+
+            <label>Date Of Birth(DOB):
+                <input type="date" placeholder="" id="DOB">
+            </label>
+            <br><br>
+        </fieldset>
+
+        <!-- <label>Address:</label>
+        <textarea placeholder="your address" rows="7" cols="20"></textarea>
+        <br><br> -->
+        <fieldset id="address">
+            <legend>Address</legend>
+            <h4><u>Correspondence address:-</u></h4>
+            <label>City/Village:</label>
+            <input type="text" placeholder="" id="city/village">
+            <!-- <br><br> -->
+            <label>District:</label>
+            <input type="text" placeholder="" id="District">
+            <br><br>
+            <label>Country:</label>
+            <input type="text" placeholder="" id="Country">
+            <!-- <br><br> -->
+            <label>State:</label>
+            <input type="text" placeholder="" id="State">
+            <br><br>
+            <label>Pincode:</label>
+            <input type="text" placeholder="" id="Pincode">
+            <br><br>
+            <label>Address:</label>
+            <textarea placeholder="your address" id=" Address" resize{} rows="7" cols="20"></textarea>
+            <br><br>
+
+            <h4><u>Permanent address:-</u></h4>
+            <label>Same as above</label>
+            <input type="checkbox" id="1">
+            <br><br>
+            <label>City/Village:</label>
+            <input type="text" placeholder="" id="2">
+            <!-- <br><br> -->
+            <label>District:</label>
+            <input type="text" placeholder="" id="3">
+            <br><br>
+            <label>Country:</label>
+            <input type="text" placeholder="" id="4">
+            <label>State:</label>
+            <input type="text" placeholder="" id="5">
+            <br><br>
+            <label>Pincode:</label>
+            <input type="text" placeholder="" id="6">
+            <br><br>
+            <label>Address:</label>
+            <textarea placeholder="your address" ></textarea>
+            <br><br>
+        </fieldset>
+
+        <label id="hobbies">Hobbies:</label>
+        <input type="checkbox">cricket
+        <input type="checkbox">cooking
+        <input type="checkbox">singing
+        <input type="checkbox">dancing
+        <input type="checkbox">reading
+        <br><br>
+        <input type="checkbox">others
+        <input type="reset">
+        <br><br>
+
+        <label id="caste">caste:</label>
+        <select name="caste">
+            <option value="General">General</option>
+            <option value="OBC">OBC</option>
+            <option value="ST">ST</option>
+            <option value="SC">SC</option>
+            <option value="Others">Others</option>
+        </select>
+        <br><br>
+
+        <fieldset>
+            <legend>Documents</legend>
+            <label>cuet marks:</label>
+            <input type="number">
+            <br><br>
+            <label>addhar no.</label>
+            <input type="text" placeholder="xxxx xxxx xxxx" id="">
+            <input type="file">
+            <br><br>
+
+            <label>Photo:</label>
+            <input type="file" id="">
+
+            <label>Signature:-</label>
+            <input type="file" id="">
+            <br><br>
+
+            <label>class xth percentage & passing year:</label>
+            <input type="text" placeholder="" id="">
+            <input type="file">
+            <br><br>
+
+            <label>class XIIth percentage & passing year:</label>
+            <input type="text" placeholder="" id="">
+            <input type="file" placeholder="" id="">
+            <br><br>
+
+            <br><br>
+
+            <label></label>
+            <input type="submit" value="submit">
+            <br>
+            <p id="demo"></p>
+            <input type="reset" value="reset">
+        </fieldset>
+    </form>
+
+    <style>
+        header {
+            text-align: center;
+            background-color: rgb(231, 223, 130);
+        }
+
+        form {
+            background-color: rgb(138, 213, 228);
+        }
+    </style>
+
+    <script src="form11.js"></script>
+</body>
+
+</html>

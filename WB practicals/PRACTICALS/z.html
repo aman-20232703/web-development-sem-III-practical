@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta Name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- <caption>
+        <h1>class routine</h1>
+        <h2>b.voc Software develpment</h2>
+        <h3>sem III</h3>
+    </caption> -->
+    <table>
+        <tr>
+            <th>periods</th>
+            <th>I</th>
+            <th>II</th>
+            <th>III</th>
+            <th>IV</th>
+            <th>V</th>
+            <th>VI</th>
+            <th>VII</th>
+            <th>VIII</th>
+            <th>IX</th>
+        </tr>
+        <tr>
+            <th>time</th>
+            <th>9-10</th>
+            <th>10-11</th>
+            <th>11-12</th>
+            <th>12-1</th>
+            <th>1-2</th>
+            <th>2-3</th>
+            <th>3-4</th>
+            <th>4-5</th>
+            <th>5-6</th>
+        </tr>
+        <tr>
+            <th>Monday</th>
+            <td colspan="2">AEC</td>
+            <!-- <td>AEC</td> -->
+            <td colspan="2">GE</td>
+            <!-- <td>GE</td> -->
+            <td>L</td>
+            <td colspan="2">DSA</td>
+            <!-- <td>DSA</td> -->
+            <td colspan="2">SEC</td>
+            <!-- <td>SEC</td> -->
+        </tr>
+        <tr>
+            <th>tuesday</th>
+            <td>DSA</td>
+            <td>os</td>
+            <td bgcolor="pink" colspan="2">wb</td>
+            <!-- <td>wb</td> -->
+            <td>U</td>
+            <td>os</td>
+            <td></td>
+            <td colspan="2">AEC</td>
+            <!-- <td>AEC</td> -->
+        </tr>
+        <tr>
+            <th>wednesday</th>
+            <td colspan="2">AEC</td>
+            <!-- <td>AEC</td> -->
+            <td colspan="2">wb</td>
+            <!-- <td>wb</td> -->
+            <td>N</td>
+            <td colspan="2">GE</td>
+            <!-- <td>GE</td> -->
+            <td colspan="2">vac</td>
+            <!-- <td>vac</td> -->
+        </tr>
+        <tr>
+            <th>thursday</th>
+            <td>DSA</td>
+            <td></td>
+            <td>DSA</td>
+            <td>os</td>
+            <td>C</td>
+            <td>GE</td>
+            <td colspan="2">sec</td>
+            <!-- <td>sec</td> -->
+            <td>AEC</td>
+        </tr>
+        <tr>
+            <th>friday</th>
+            <td></td>
+            <td></td>
+            <td colspan="2">wb</td>
+            <!-- <td>wb</td> -->
+            <td>H</td>
+            <td colspan="2">vac</td>
+            <!-- <td>vac</td> -->
+            <td colspan="2">sec</td>
+            <!-- <td>sec</td> -->
+        </tr>
+        
+    </table>
+
+    <h1>Name split</h1>
+    <input type="text" id="fullName" placeholder="fullName">
+    <button onclick="splitName">submit</button>
+    
+    <label>first Name:<span id="firstame">NA</span></label>
+    <label>middle Name:<span id="middleName">NA</span></label>
+    <label>last Name:<span id="lastName">NA</span></label>
+
+    <script>
+        function splitName(){
+            const[firstName="NA", ...rest]=document.getElementById("fullName").value.trim().split(" ");
+            const lastName=rest.length ? rest.pop():"NA";
+            const middleName=rest.length ? rest.join(" "):"NA";
+
+            document.getElementById("firstName").textContent=firstName
+            document.getElementById("middleName").textContent=middleName
+            document.getElementById("lastName").textContent=lastName
+        }
+    </script>
+</body>
+</html>

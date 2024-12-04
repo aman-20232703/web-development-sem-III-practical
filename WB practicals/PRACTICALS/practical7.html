@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let date=new Date(2024,10,21,5,45,55) //constructor who make object
+        console.log(date)
+
+        let yr=date.getFullYear()
+        console.log(yr)
+
+        let month=date.getMonth()
+        console.log(month)
+
+        let dt=date.getDate()
+        console.log(dt)
+
+        let hr=date.getHours()
+        console.log(hr)
+
+
+    </script> -->
+    <script>
+        const date=new Date(); //constructor who make object
+
+        const n=date.toDateString();
+        const time=date.toLocaleDateString();
+
+        console.log("current date: "+n)
+        console.log("current time: "+time)
+    </script>
+</body>
+</html>

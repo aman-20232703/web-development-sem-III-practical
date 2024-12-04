@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Name split</h1>
+    <input type="text" id="fullName" placeholder="fullname">
+    <button onclick="splitName()">submit</button>
+
+    <label>first Name:<span id="firstame">NA</span></label>
+    <label>middle Name:<span id="middleName">NA</span></label>
+    <label>last Name:<span id="lastName">NA</span></label>
+
+    <script>
+        function splitName() {
+            const [firstName = "NA", ...rest] = document.getElementById("fullName").value.trim().split(" ");
+            const lastName = rest.length ? rest.pop() : "NA";
+            const middleName = rest.length ? rest.join(" ") : "NA";
+
+            document.getElementById("firstName").textContent = firstName
+            document.getElementById("middleName").textContent = middleName
+            document.getElementById("lastName").textContent = lastName
+        }
+    </script>
+</body>
+
+</html>

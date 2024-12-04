@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes f_expand{
+            from{font-size: 5px;}
+            to{font-size: 50px;}
+        }
+
+        @keyframes f_shrink{
+            from{font-size: 50px;}
+            to{font-size: 5px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="one">AmaN KUmAR</div>
+    <script>
+        let text=document.querySelector("#one");
+
+        function display(){
+            text.innerHTML="AMAN KUMAR"
+            text.style.color="red"
+            text.style.animation="f_expand 5s ease"
+        }
+        display()
+
+        let display1=setInterval(()=>{
+            text.innerHTML="aman kumar"
+            text.style.color="green"
+            text.style.animation="f_shrink 5s ease"
+        },5000)
+        display1()
+    </script>
+</body>
+</html>

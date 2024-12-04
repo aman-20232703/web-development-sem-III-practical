@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form1</title>
+    <style>
+        @keyframes expand {
+            from {
+                font-size: 5px;
+            }
+
+            to {
+                font-size: 50px;
+            }
+        }
+
+        @keyframes shrink {
+            from {
+                font-size: 50px;
+            }
+
+            to {
+                font-size: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header style="text-align: center;">
+        <h1>RAMANUJAN COLLEGE</h1>
+        <h2>b.voc software development</h2>
+        <h3>admission form</h3>
+    </header>
+
+    <form name="myform" action="admission form.html" onsubmit="return validateform()" method="post">
+        <fieldset>
+            <legend>personalia</legend>
+
+            <label for="no.">registration no.
+                <input type="number" id="rg.no" required>
+            </label>
+            <br><br>
+            <label for="pass">password
+                <input type="password" id="pass">
+            </label>
+            <label for="pass">cnf. password
+                <input type="password" id="cnf.pass" required>
+            </label>
+            <br><br>
+            <label for="fname.">first name
+                <input type="text" id="fname">
+            </label>
+            <label for="lname">last name
+                <input type="text" id="lname">
+            </label>
+            <br><br>
+            <label for="father">father name
+                <input type="text" id="father">
+            </label>
+            <label for="mother">mother name
+                <input type="text" id="mother">
+            </label>
+            <br><br>
+            <label for="mob.">mobile number
+                <input type="number" id="mnumber" required>
+            </label>
+            <br><br>
+            <label for="email">email
+                <input type="email" id="email" required>
+            </label>
+            <br><br>
+            <label for="course">course
+                <input type="text" id="course" required>
+            </label>
+            <br><br>
+            <label for="gender">gender
+                <input type="radio" value="male" name="gender" required>male
+                <input type="radio" value="female" name="gender" required>female
+            </label>
+            <br><br>
+            <label for="DOB" required>DOB
+                <input type="date" id="DOB">
+            </label>
+        </fieldset>
+        <fieldset>address
+            <legend>permanenet address</legend>
+
+            <label for="city">city/village:
+                <input type="text" id="city">
+            </label>
+            <label for="district">district:
+                <input type="text" id="district">
+            </label>
+            <br><br>
+            <label for="pincode" required>pincode:
+                <input type="number" id="pincode">
+            </label>
+            <label for="state">state:
+                <input type="text" id="state">
+            </label>
+            <br><br>
+            <label for="country">country:
+                <input type="number" id="country">
+            </label>
+            <br><br>
+            <label for="address">address:</label>
+            <textarea placeholder="your address" id="7" rows="7" cols="20"></textarea>
+        </fieldset>
+        <fieldset>
+            <label for="hobbies">hobbies
+                <input type="checkbox">cricket
+                <input type="checkbox">movie
+                <input type="checkbox">dancing
+                <input type="checkbox">cooking
+                <input type="checkbox">others
+                <input type="reset">
+            </label>
+            <br><br>
+            <label for="caste">caste
+                <select name="caste" id="caste">
+                    <option value="general">general</option>
+                    <option value="general">obc</option>
+                    <option value="general">st</option>
+                    <option value="general">sc</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>documents</legend>
+
+            <label for="photo" required>photo
+                <input type="file" id="photo">
+            </label>
+            <br><br>
+            <label for="addhar" required>addhar
+                <input type="text" placeholder="xxxx xxxx xxxx">
+                <input type="file" id="addhar">
+            </label>
+            <br><br>
+            <label for="XIIth marksheet" required>XIIth marksheet
+                <input type="text">
+                <input type="file" id="XIIth marksheet">
+            </label>
+            <br><br>
+            <label for="cuet marksheet" required>cuet marksheet
+                <input type="text">
+                <input type="file" id="cuet marksheet">
+            </label>
+            <br><br>
+            <label for="signature" required>signature
+                <input type="file" id="signature">
+            </label>
+            <br><br>
+            <label for="migration" required>migration
+                <input type="file" id="minration">
+            </label>
+        </fieldset>
+
+        <label for="submit">
+            <button>submit</button>
+            <input type="reset">
+        </label>
+    </form>
+
+
+    <!-- practical 11 -->
+    <script>
+        function validateForm() {
+            var a = document.getElementById("fname", "lname", "father", "mother", "course", "Country", "State", "District"), value;
+            var b = document.getElementById("rg.no").value;
+            var c = document.getElementById("pass").value;
+            var d = document.getElementById("cnf.pass").value;
+            var e = document.getElementById("mnumber").value;
+            var f = document.getElementById("email").value;
+
+            if (a == "" | b == "" | c == "" | d == "" | e == "" | f == "") {
+                alert("all must filled")
+                return false
+            }
+            else if (b.length < 9 | b.length > 9) {
+                alert("must be 9 digit")
+                return false
+            }
+            else if (isNaN(c)) {
+                alert("only number")
+                return false
+            }
+            else if (c != d) {
+                alert("not match both password")
+                return false
+            }
+            else if (e.length < 10 | e.length > 10) {
+                alert("all must be 10 digit")
+                return false
+            }
+            else if (f != /^[A-Za-z0-9._-]+@[A-Za-z0-9._-]+\.[A-Za-z]$/) {
+                alert("valid email")
+                return false
+            }
+        }
+    </script>
+    
+    <!-- practical 7,8 & 9 -->
+    <script>
+        let a = "amAnKUmar"
+        console.log(a.replace("A", ""))
+        console.log(a.toLocaleLowerCase())
+        console.log(a.toLocaleUpperCase())
+
+        let arr = [23, 56, 9, 17]
+        sum = 0
+        for (i = 0; i < arr.length; i++) {
+            sum += arr[i]
+        }
+        console.log(sum)
+
+        const date = new Date()
+        console.log(date.toDateString())
+        console.log(date.toLocaleDateString())
+    </script>
+
+    <!-- practicle 10 -->
+    <h1>Name splitter</h1>
+    <input type="text" id="fullName" placeholder="fullName">
+    <button onclick="splitName()">submit</button>
+
+    <label>firstName:<span id="firstame">NA</span></label>
+    <label>middleName:<span id="middleName">NA</span></label>
+    <label>lastName:<span id="lastName">NA</span></label>
+
+
+    <script>
+        function splitName() {
+            const [firstName = "NA", ...rest] = document.getElementById("fullName").value.trim().split(" ");
+            const lastName = rest.length ? rest.pop() : "NA";
+            const middleName = rest.length ? rest.join(" ") : "NA";
+
+            document.getElementById("firstName").textContent = firstName
+            document.getElementById("middleName").textContent = middleName
+            document.getElementById("lastName").textContent = lastName
+
+        }
+    </script>
+
+    <!-- practical 12 -->
+    <div id="one">AMAN KUMAR</div>
+    <script>
+        let text = document.getElementById("one");
+
+        function display() {
+            text.innerHTML = "amAN kuMAr"
+            text.style.color = "red"
+            text.style.animation = "expand 5s ease"
+        }
+        display()
+
+        let display1 = setTimeout(() => {
+            text.innerHTML = "aman kumar"
+            text.style.color = "green"
+            text.style.animation = "shrink 5s ease"
+        }, 5000)
+        display1()
+    </script>
+    
+    <!-- practical 15 -->
+    <div>
+        <div class="main">
+            <div class="countdown">
+                <div class="title">Happy Birthday mani</div>
+                <div class="title" id="end-date">29 October 2024 12:00 AM</div>
+                <div class="col">
+                    <div>
+                        <input type="text" readonly value="0">
+                        <br/>
+                        <label for="">Days</label>
+                    </div>
+                    <div>
+                        <input type="text" readonly value="0">
+                        <br/>
+                        <label for="">Hours</label>
+                    </div>
+                    <div>
+                        <input type="text" readonly value="0">
+                        <br/>
+                        <label for="">Minutes</label>
+                    </div>
+                    <div>
+                        <input type="text" readonly value="0">
+                        <br/>
+                        <label for="">Seconds</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <script src="practical 8.js"></script> -->
+        <script src="practical 15.js"></script>
+    </div>
+    <script>
+        const enddate="4 december 2024 12:00 AM"
+        document.getElementById("end-date").innerHTML=enddate
+        const input=document.querySelectorAll("input")
+
+        function clock(){
+            const end=new Date(enddate)
+            const now=new Date()
+            const diff=(end-now)/1000
+
+            if(diff<0) return;
+
+            input[0].value=Math.floor(diff/3600/24);
+            input[1].value=Math.floor(diff/3600)%24;
+            input[2].value=Math.floor(diff/60)%60;
+            input[3].value=Math.floor(diff)%60;
+        }
+
+        clock()
+
+        setInterval(()=>{
+            clock()
+        },1000)
+    </script>
+</body>
+
+</html>

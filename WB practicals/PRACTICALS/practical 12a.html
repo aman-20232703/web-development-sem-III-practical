@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        #one {
+            text-align: center;
+            font-size: 5pt;
+            margin-top: 250px;
+            color: red;
+        }
+    </style>
+<body>
+    <div id="one">AMAN KUMAR</div>
+    <script>
+        let size = 5, grow = true, text = document.getElementById("one");
+        const animate = setInterval(() => {
+            size += grow ? 1 : -1;
+            text.style.fontSize = size + "pt";
+            if (size === 50) { text.textContent = "aman kumar"; text.style.color = "green"; grow = false; }
+            if (size === 5) clearInterval(animate);
+        }, 50);
+    </script>
+</body>
+</html>
